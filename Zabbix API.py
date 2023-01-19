@@ -11,4 +11,4 @@ hosts = zapi.host.get(
     }
 )
 for h in hosts:
-    print (h['host'])
+    print (h['host']) teste
