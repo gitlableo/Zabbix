@@ -1,0 +1,241 @@
+asterisk manager centos 6.6
+
+https://wiki.asterisk.org/wiki/display/AST/The+Asterisk+Manager+TCP+IP+API
+
+Bibliografia:
+
+script asterisk zabbix https://saperx.com.br/blog/monitorando-o-asterisk-no-zabbix
+
+asterisk via snmp https://techexpert.tips/pt-br/zabbix-pt-br/zabbix-monitorar-servidor-asterisk-usando-snmp/
+
+zabbix asterisk integration https://www.zabbix.com/br/integrations/asterisk
+
+x-simplesip*CLI> help
+!  Execute a shell command
+abort halt  Cancel a running halt
+ael debug contexts  Enable AEL contexts debug (does nothing)
+ael debug macros  Enable AEL macros debug (does nothing)
+ael debug read  Enable AEL read debug (does nothing)
+ael debug tokens  Enable AEL tokens debug (does nothing)
+ael nodebug  Disable AEL debug messages
+ael reload  Reload AEL configuration
+agent logoff  Sets an agent offline
+agent show  Show status of agents
+agent show online  Show all online agents
+agi debug  Enable AGI debugging
+agi debug off  Disable AGI debugging
+agi dumphtml  Dumps a list of agi commands in html format
+agi show  List AGI commands or specific help
+cdr status  Display the CDR status
+core clear profile  Clear profiling info
+core set debug channel  Enable/disable debugging on a channel
+core set debug  Set level of debug chattiness
+core set debug off  Turns off debug chattiness
+core set global  Set global dialplan variable
+core set verbose  Set level of verboseness
+core show applications  Shows registered dialplan applications
+core show application  Describe a specific dialplan application
+core show audio codecs  Displays a list of audio codecs
+core show channels  Display information on channels
+core show channel  Display information on a specific channel
+core show channeltypes  List available channel types
+core show channeltype  Give more details on that channel type
+core show codecs  Displays a list of codecs
+core show codec  Shows a specific codec
+core show config mappings  Display config mappings (file names to config engines)
+core show file formats  Displays file formats
+core show file version  List versions of files used to build Asterisk
+core show functions  Shows registered dialplan functions
+core show function  Describe a specific dialplan function
+core show globals  Show global dialplan variables
+core show hints  Show dialplan hints
+core show image codecs  Displays a list of image codecs
+core show image formats  Displays image formats
+core show license  Show the license(s) for this copy of Asterisk
+core show profile  Display profiling info
+core show switches  Show alternative switches
+core show threads  Show running threads
+core show translation  Display translation matrix
+core show uptime  Show uptime information
+core show version  Display version info
+core show video codecs  Displays a list of video codecs
+core show warranty  Show the warranty (if any) for this copy of Asterisk
+core waitfullybooted  Wait until Asterisk has fully booted.
+dahdi destroy channel  Destroy a channel
+dahdi restart  Fully restart DAHDI channels
+dahdi show cadences  List cadences
+dahdi show channels  Show active DAHDI channels
+dahdi show channel  Show information on a channel
+dahdi show status  Show all DAHDI cards status
+database del  Removes database key/value
+database deltree  Removes database keytree/values
+database get  Gets database value
+database put  Adds/updates database value
+database show  Shows database contents
+database showkey  Shows database contents
+dialplan add extension  Add new extension into context
+dialplan add ignorepat  Add new ignore pattern
+dialplan add include  Include context in other context
+dialplan reload  Reload extensions and *only* extensions
+dialplan remove extension  Remove a specified extension
+dialplan remove ignorepat  Remove ignore pattern from context
+dialplan remove include  Remove a specified include from context
+dialplan show  Show dialplan
+dnsmgr refresh  Performs an immediate refresh
+dnsmgr reload  Reloads the DNS manager configuration
+dnsmgr status  Display the DNS manager status
+feature show  Lists configured features
+file convert  Convert audio file
+g729 debug  Toggle g729 codec frame size statistics
+group show channels  Display active channels with group(s)
+help  Display help list, or specific help on a command
+http show status  Display HTTP server status
+iax2 provision  Provision an IAX device
+iax2 prune realtime  Prune a cached realtime lookup
+iax2 reload  Reload IAX configuration
+iax2 set debug  Enable IAX debugging
+iax2 set debug jb  Enable IAX jitterbuffer debugging
+iax2 set debug jb off  Disable IAX jitterbuffer debugging
+iax2 set debug off  Disable IAX debugging
+iax2 set debug trunk  Enable IAX trunk debugging
+iax2 set debug trunk off  Disable IAX trunk debugging
+iax2 show cache  Display IAX cached dialplan
+iax2 show callnumber usag  Show current entries in ip Call number limit table
+iax2 show channels  List active IAX channels
+iax2 show firmware  List available IAX firmwares
+iax2 show netstats  List active IAX channel netstats
+iax2 show peers  List defined IAX peers
+iax2 show peer  Show details on specific IAX peer
+iax2 show provisioning  Display iax provisioning
+iax2 show registry  Display IAX registration status
+iax2 show stats  Display IAX statistics
+iax2 show threads  Display IAX helper thread info
+iax2 show users  List defined IAX users
+iax2 test losspct  Set IAX2 incoming frame loss percentage
+indication add  Add the given indication to the country
+indication remove  Remove the given indication from the country
+indication show  Display a list of all countries/indications
+keys init  Initialize RSA key passcodes
+keys show  Displays RSA key information
+khomp calls show  Show each Khomp channel that has more than one call state associated.
+khomp channels disconnect  Disconnect a(ll) channel(s).
+khomp channels show  Show all channels status.
+khomp channels statistics  Shows/clear channels statistics.
+khomp channels unblock  Unblock a(ll) channel(s).
+khomp dump branches  Dump configured branches on screen.
+khomp dump config  Dump configuration values on screen.
+khomp dump core  Dump core in text format for debugging.
+khomp dump groups  Dump configured groups on screen.
+khomp get  Get configuration options in the Khomp channel.
+khomp kommuter  Activate/deactivate or print the status of Kommuter devices.
+khomp links errors  Show/clear the error counters of the links.
+khomp links reset  Reset the specified link.
+khomp links show  Show E1 link(s) status.
+khomp log console  Enables/disables showing console messages for the channel.
+khomp log disk  Enables/disables logging to file messages for the channel.
+khomp log rotate  Rotate the files where the messages are being logged.
+khomp log status  Show the status of the messages.
+khomp log update  Update log configuration from K3L.
+khomp modem iccid  Prints the SIM card identification number.
+khomp modem imei  Prints IMEI of modem device on GSM channel.
+khomp modem imsi  Prints the International Mobile Subscriber Identity number.
+khomp modem reset  Reset the modem of a GSM channel.
+khomp modem sim card  Prints the number of the active SIM card on selected channels.
+khomp revision  Show revision number.
+khomp select sim  Select SIM card, available in Khomp GSM interfaces.
+khomp send command  Send a K3L API command directly to the board.
+khomp send raw command  Send a command directly to a DSP at the board.
+khomp set  Adjust configuration options in the Khomp channel.
+khomp sms  Send an SMS message using a Khomp GSM interface.
+khomp summary  Print system info.
+khomp sysinfo  Print system diagnostic info.
+khomp ussd  Send a USSD message using a Khomp GSM interface.
+local show channels  List status of local channels
+logger mute  Toggle logging output to a console
+logger reload  Reopens the log files
+logger rotate  Rotates and reopens the log files
+logger show channels  List configured log channels
+manager show command  Show a manager interface command
+manager show commands  List manager interface commands
+manager show connected  List connected manager interface users
+manager show eventq  List manager interface queued events
+manager show users  List configured manager users
+manager show user  Display information on a specific manager user
+meetme  Execute a command on a conference or conferee
+mixmonitor  Execute a MixMonitor command.
+module load  Load a module by name
+module reload  Reload configuration
+module show  List modules and info
+module show like  List modules and info
+module unload  Unload a module by name
+moh reload  Music On Hold
+moh show classes  List MOH classes
+moh show files  List MOH file-based classes
+no debug channel
+originate  Originate a call
+pri debug span  Enables PRI debugging on a span
+pri intense debug span  Enables REALLY INTENSE PRI debugging
+pri no debug span  Disables PRI debugging on a span
+pri set debug file  Sends PRI debug output to the specified file
+pri show debug  Displays current PRI debug settings
+pri show spans  Displays PRI Information
+pri show span  Displays PRI Information
+pri show version  Displays version of libpri
+pri unset debug file  Ends PRI debug output to file
+queue add member  Add a channel to a specified queue
+queue remove member  Removes a channel from a specified queue
+queue show  Show status of a specified queue
+realtime load  Used to print out RealTime variables.
+realtime update  Used to update RealTime variables.
+restart gracefully  Restart Asterisk gracefully
+restart now  Restart Asterisk immediately
+restart when convenient  Restart Asterisk at empty call volume
+rtcp debug ip  Enable RTCP debugging on IP
+rtcp debug  Enable RTCP debugging
+rtcp debug off  Disable RTCP debugging
+rtcp stats  Enable RTCP stats
+rtcp stats off  Disable RTCP stats
+rtp debug ip  Enable RTP debugging on IP
+rtp debug  Enable RTP debugging
+rtp debug off  Disable RTP debugging
+say load  set/show the say mode
+show parkedcalls  Lists parked calls
+show queues
+sip history  Enable SIP history
+sip history off  Disable SIP history
+sip notify  Send a notify packet to a SIP peer
+sip prune realtime  Prune cached Realtime object(s)
+sip prune realtime peer  Prune cached Realtime peer(s)
+sip prune realtime user  Prune cached Realtime user(s)
+sip reload  Reload SIP configuration
+sip set debug  Enable SIP debugging
+sip set debug ip  Enable SIP debugging on IP
+sip set debug off  Disable SIP debugging
+sip set debug peer  Enable SIP debugging on Peername
+sip show channels  List active SIP channels
+sip show channel  Show detailed SIP channel info
+sip show domains  List our local SIP domains.
+sip show history  Show SIP dialog history
+sip show inuse  List all inuse/limits
+sip show objects  List all SIP object allocations
+sip show peers  List defined SIP peers
+sip show peer  Show details on specific SIP peer
+sip show registry  List SIP registration status
+sip show settings  Show SIP global settings
+sip show subscriptions  List active SIP subscriptions
+sip show users  List defined SIP users
+sip show user  Show details on specific SIP user
+sla show stations  Show SLA Stations
+sla show trunks  Show SLA Trunks
+soft hangup  Request a hangup on a given channel
+stop gracefully  Gracefully shut down Asterisk
+stop now  Shut down Asterisk immediately
+stop when convenient  Shut down Asterisk at empty call volume
+stun debug  Enable STUN debugging
+stun debug off  Disable STUN debugging
+transcoder show  Display DAHDI transcoder utilization.
+udptl debug  Enable UDPTL debugging
+udptl debug ip  Enable UDPTL debugging on IP
+udptl debug off  Disable UDPTL debugging
+voicemail show users  List defined voicemail boxes
+voicemail show zones  List zone message formats
