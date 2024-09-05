@@ -8,4 +8,4 @@ eval $(grep "^ *DB" /etc/zabbix/zabbix_server.conf | sed -e 's/=/="/' -e 's/ *$/
 /usr/bin/mysqldump -u$DBUser -p$DBPassword $DBName > zabbix_server.sql
 
 # Start Zabbix server again
-/usr/local/sbin/zabbix_server
+systemctl start zabbix_server
